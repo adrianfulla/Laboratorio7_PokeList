@@ -1,4 +1,4 @@
-package gt.uvg.pokeList.model
+package gt.uvg.pokelist.model
 
 data class Result(
     val name: String,

@@ -1,4 +1,4 @@
-package gt.uvg.pokeList
+package gt.uvg.pokelist
 
 import org.junit.Test
 

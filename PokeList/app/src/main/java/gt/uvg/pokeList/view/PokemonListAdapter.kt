@@ -2,14 +2,21 @@ package gt.uvg.pokelist.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
+import gt.uvg.pokelist.R
 import gt.uvg.pokelist.databinding.ItemPokemonViewBinding
+//import gt.uvg.pokelist.databinding.ItemPokemonViewBinding
 import gt.uvg.pokelist.model.Pokemon
 
 class PokemonListAdapter(private val pokemonList: List<Pokemon>) : RecyclerView.Adapter<PokemonListAdapter.PokemonListHolder>() {
+
+
     inner class PokemonListHolder(val binding: ItemPokemonViewBinding) : RecyclerView.ViewHolder(binding.root)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonListHolder {
         val binding = ItemPokemonViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PokemonListHolder(binding)
@@ -22,6 +29,9 @@ class PokemonListAdapter(private val pokemonList: List<Pokemon>) : RecyclerView.
             val action = MainFragmentDirections.actionMainFragmentToDetailFragment(pokemon.id)
             holder.itemView.findNavController().navigate(action)
         }
-    }
+   }
+
     override fun getItemCount(): Int = pokemonList.size
+
+
 }

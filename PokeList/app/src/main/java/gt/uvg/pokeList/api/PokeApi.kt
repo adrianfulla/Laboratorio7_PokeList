@@ -1,6 +1,6 @@
-package gt.uvg.pokeList.api
+package gt.uvg.pokelist.api
 
-import gt.uvg.pokeList.model.PokemonResponse
+import gt.uvg.pokelist.model.PokemonResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

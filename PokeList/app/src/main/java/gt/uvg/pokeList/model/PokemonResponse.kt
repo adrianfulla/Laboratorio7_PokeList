@@ -1,4 +1,4 @@
-package gt.uvg.pokeList.model
+package gt.uvg.pokelist.model
 
 data class PokemonResponse(
     val count: Int,
